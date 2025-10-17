@@ -1,103 +1,153 @@
-import Image from "next/image";
+export const dynamic = "force-static";
 
 export default function Home() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+    <main className="min-h-dvh">
+      {/* Hero */}
+      <section className="relative overflow-hidden">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(45rem_30rem_at_20%_20%,rgba(14,165,233,.15),transparent)] dark:bg-[radial-gradient(45rem_30rem_at_20%_20%,rgba(14,165,233,.2),transparent)]" />
+        <div className="mx-auto max-w-6xl px-6 md:px-10 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
+          <div>
+            <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
+              Grow faster with
+              <span className="text-sky-600"> data-driven marketing</span>
+            </h1>
+            <p className="mt-5 text-lg md:text-xl text-black/70 dark:text-white/70 max-w-xl">
+              Ankit Ranjan Digital Marketing Solution blends SEO, PPC, social, and analytics
+              to drive measurable ROI and sustainable brand growth.
+            </p>
+            <div className="mt-8 flex gap-3">
+              <a href="/contact" className="px-6 py-3 rounded-md bg-sky-500 text-white font-medium hover:bg-sky-600 transition-colors">
+                Get a Free Consultation
+              </a>
+              <a href="/services" className="px-6 py-3 rounded-md border border-black/10 dark:border-white/20 hover:bg-black/5 dark:hover:bg-white/10 transition-colors">
+                Explore Services
+              </a>
+            </div>
+          </div>
+          <div className="relative">
+            <div className="aspect-[4/3] rounded-xl border border-black/10 dark:border-white/10 bg-gradient-to-br from-sky-100 via-white to-amber-50 dark:from-sky-900/20 dark:via-black dark:to-amber-900/10 shadow-sm" />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+
+      {/* Feature grid */}
+      <section className="mx-auto max-w-6xl px-6 md:px-10 py-16 md:py-20">
+        <h2 className="text-2xl md:text-4xl font-bold">Capabilities</h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {[ 
+            { t: "SEO", d: "Technical SEO, on-page, content, and authority building." },
+            { t: "PPC", d: "Google & Meta Ads with rigorous experimentation and budget control." },
+            { t: "Analytics", d: "GA4, tracking, dashboards, and conversion optimization." },
+          ].map(({ t, d }) => (
+            <div key={t} className="rounded-lg border border-black/10 dark:border-white/15 p-6">
+              <h3 className="text-xl font-semibold">{t}</h3>
+              <p className="mt-2 text-sm text-black/70 dark:text-white/70">{d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Trusted by */}
+      <section className="mx-auto max-w-6xl px-6 md:px-10 py-10 md:py-14">
+        <p className="text-center text-sm uppercase tracking-wider text-black/60 dark:text-white/60">Trusted by teams at</p>
+        <div className="mt-6 grid grid-cols-2 md:grid-cols-5 gap-6 place-items-center opacity-80">
+          {["next.svg","vercel.svg","globe.svg","window.svg","file.svg"].map((src) => (
+            <img key={src} alt="logo" src={`/${src}`} className="h-6 md:h-7 dark:invert" />
+          ))}
+        </div>
+      </section>
+
+      {/* Our process */}
+      <section className="mx-auto max-w-6xl px-6 md:px-10 py-16 md:py-20">
+        <h2 className="text-2xl md:text-4xl font-bold">Our Process</h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-4">
+          {[
+            { t: "Discover", d: "Audit, goals, ICP, and competitive landscape." },
+            { t: "Plan", d: "Roadmap with KPIs, channels, and resourcing." },
+            { t: "Execute", d: "Launch SEO, ads, and content with tight feedback loops." },
+            { t: "Optimize", d: "Measure, test, and iterate for compounding gains." },
+          ].map(({ t, d }, i) => (
+            <div key={t} className="rounded-lg border border-black/10 dark:border-white/15 p-6">
+              <div className="h-8 w-8 rounded-full bg-sky-500/10 text-sky-600 grid place-items-center font-semibold">{i+1}</div>
+              <h3 className="mt-3 text-lg font-semibold">{t}</h3>
+              <p className="mt-2 text-sm text-black/70 dark:text-white/70">{d}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* Case studies */}
+      <section className="mx-auto max-w-6xl px-6 md:px-10 py-16 md:py-20">
+        <h2 className="text-2xl md:text-4xl font-bold">Case Studies</h2>
+        <div className="mt-8 grid gap-6 md:grid-cols-3">
+          {[
+            { k: "SaaS", h: "+62% Qualified Leads", d: "Scaled SEO + paid search with CRO to reduce CPA." },
+            { k: "E‑commerce", h: "+38% ROAS", d: "Performance creatives and feed optimization across channels." },
+            { k: "Fintech", h: "3x Organic Traffic", d: "Technical fixes + content clusters for compounding growth." },
+          ].map(({ k, h, d }) => (
+            <article key={k} className="rounded-xl border border-black/10 dark:border-white/15 p-6 bg-white/60 dark:bg-black/40">
+              <span className="text-xs uppercase tracking-wider text-black/60 dark:text-white/60">{k}</span>
+              <h3 className="mt-2 text-xl font-semibold">{h}</h3>
+              <p className="mt-2 text-sm text-black/70 dark:text-white/70">{d}</p>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ */}
+      <section className="mx-auto max-w-6xl px-6 md:px-10 py-16 md:py-20">
+        <h2 className="text-2xl md:text-4xl font-bold">FAQ</h2>
+        <div className="mt-6 divide-y divide-black/10 dark:divide-white/15 rounded-xl border border-black/10 dark:border-white/15">
+          {[
+            { q: "How soon can we see results?", a: "Most clients see early wins in 4–8 weeks with bigger gains over 3–6 months." },
+            { q: "Do you work on retainers or projects?", a: "Both. We tailor the engagement to your goals and team structure." },
+            { q: "Can you integrate with our analytics stack?", a: "Yes — GA4, Looker, Segment, server-side tagging, and more." },
+          ].map(({ q, a }) => (
+            <details key={q} className="group p-5">
+              <summary className="cursor-pointer list-none font-medium flex items-center justify-between">
+                <span>{q}</span>
+                <span className="ml-4 text-black/50 dark:text-white/50 group-open:rotate-45 transition-transform">+</span>
+              </summary>
+              <p className="mt-2 text-sm text-black/70 dark:text-white/70 max-w-3xl">{a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+
+      {/* Social proof */}
+      <section className="mx-auto max-w-6xl px-6 md:px-10 py-10 md:py-14">
+        <div className="rounded-xl border border-black/10 dark:border-white/15 p-6 md:p-10 bg-white/60 dark:bg-black/40">
+          <p className="text-lg md:text-xl text-black/70 dark:text-white/70">
+            “Within 90 days, our qualified leads increased by 62% with a better CPA.”
+          </p>
+          <p className="mt-3 font-medium">— Growth Lead, SaaS Startup</p>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="mx-auto max-w-6xl px-6 md:px-10 pb-20 md:pb-28">
+        <div className="rounded-2xl p-8 md:p-12 bg-gradient-to-r from-sky-500 to-sky-600 text-white">
+          <h3 className="text-2xl md:text-4xl font-bold">Ready to accelerate growth?</h3>
+          <p className="mt-3 text-white/90 max-w-2xl">Book a free strategy call and get a tailored growth plan.</p>
+          <div className="mt-6">
+            <a href="/contact" className="px-6 py-3 rounded-md bg-white text-sky-700 font-medium hover:bg-white/90 transition-colors">
+              Book a Strategy Call
+            </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="mx-auto max-w-6xl px-6 md:px-10 pb-20">
+        <div className="rounded-2xl p-8 md:p-12 border border-black/10 dark:border-white/15 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold">Let’s build your growth engine</h3>
+          <p className="mt-3 text-black/70 dark:text-white/70">Tell us your goals and we’ll propose a plan within 48 hours.</p>
+          <div className="mt-6">
+            <a href="/contact" className="px-6 py-3 rounded-md bg-sky-500 text-white font-medium hover:bg-sky-600 transition-colors">Start the conversation</a>
+          </div>
+        </div>
+      </section>
+    </main>
   );
 }
