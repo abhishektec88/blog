@@ -56,7 +56,7 @@ faqs:
   - question: Can you integrate with our analytics stack?
     answer: Yes — GA4, Looker, Segment, server-side tagging, and more.
 socialProof:
-  quote: "Within 90 days, our qualified leads increased by 62% with a better CPA."
+  quote: Within 90 days, our qualified leads increased by 62% with a better CPA.
   attribution: "— Growth Lead, SaaS Startup"
 cta:
   heading: Ready to accelerate growth?

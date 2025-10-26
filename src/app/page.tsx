@@ -169,7 +169,7 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 md:px-10 py-10 md:py-14">
         <div className="rounded-xl border border-black/10 dark:border-white/15 p-6 md:p-10 bg-white/60 dark:bg-black/40">
           <p className="text-lg md:text-xl text-black/70 dark:text-white/70">
-            "{socialProof.quote}"
+            &ldquo;{socialProof.quote}&rdquo;
           </p>
           <p className="mt-3 font-medium">{socialProof.attribution}</p>
         </div>
