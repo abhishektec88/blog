@@ -1,0 +1,25 @@
+title: "Digital Marketing Services"
+metaDescription: "Comprehensive digital marketing services including SEO, PPC advertising, social media marketing, and web analytics. Full-funnel growth services tailored to your business goals."
+keywords:
+  - "SEO services"
+  - "PPC advertising"
+  - "Google Ads management"
+  - "social media marketing"
+  - "content marketing"
+  - "web analytics"
+  - "conversion optimization"
+  - "digital marketing agency"
+  - "growth marketing"
+
+h1: "Services"
+introText: "Full-funnel growth services tailored to your business goals and stage."
+
+services:
+  - title: "Search Engine Optimization"
+    description: "Audits, on-page, content strategy, and authority building."
+  - title: "Paid Media (PPC)"
+    description: "Google Ads, Meta, and performance creatives with A/B testing."
+  - title: "Content & Social"
+    description: "Content calendars, distribution, and social community growth."
+  - title: "Analytics & CRO"
+    description: "GA4, funnels, dashboards, and experiments for conversion lift."
