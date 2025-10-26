@@ -13,7 +13,7 @@ export default function AboutPage() {
         <h1 className="text-3xl md:text-5xl font-bold">About</h1>
         <p className="mt-4 text-black/70 dark:text-white/70">
           We are a results-driven digital marketing partner focused on measurable growth.
-          Our approach blends strategy, creative, and analytics to build enduring brands.
+          Our approach blends strategy, creative, and analytics to build enduring-brands.
         </p>
       </div>
     </main>
