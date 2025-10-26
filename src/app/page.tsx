@@ -1,6 +1,25 @@
+import { getHomepageContent } from '@/lib/content';
+
 export const dynamic = "force-static";
 
 export default function Home() {
+  const content = getHomepageContent();
+
+  // Fallback to default content if file doesn't exist yet
+  const heroH1 = content?.heroH1 || "Grow faster with data-driven marketing";
+  const heroDescription = content?.heroDescription || "Ankit Ranjan Digital Marketing Solution blends SEO, PPC, social, and analytics to drive measurable ROI and sustainable brand growth.";
+  const services = content?.services || [
+    { name: "SEO", description: "Technical SEO, on-page, content, and authority building." },
+    { name: "PPC", description: "Google & Meta Ads with rigorous experimentation and budget control." },
+    { name: "Analytics", description: "GA4, tracking, dashboards, and conversion optimization." },
+  ];
+  const process = content?.process || [
+    { number: 1, title: "Discover", description: "Audit, goals, ICP, and competitive landscape." },
+    { number: 2, title: "Plan", description: "Roadmap with KPIs, channels, and resourcing." },
+    { number: 3, title: "Execute", description: "Launch SEO, ads, and content with tight feedback loops." },
+    { number: 4, title: "Optimize", description: "Measure, test, and iterate for compounding gains." },
+  ];
+
   return (
     <main className="min-h-dvh">
       {/* Hero */}
@@ -9,12 +28,11 @@ export default function Home() {
         <div className="mx-auto max-w-6xl px-6 md:px-10 py-20 md:py-28 grid md:grid-cols-2 gap-10 items-center">
           <div>
             <h1 className="text-5xl md:text-7xl font-extrabold leading-tight tracking-tight">
-              Grow faster with
+              {heroH1.split('data-driven')[0]}
               <span className="text-sky-600"> data-driven marketing</span>
             </h1>
             <p className="mt-5 text-lg md:text-xl text-black/70 dark:text-white/70 max-w-xl">
-              Ankit Ranjan Digital Marketing Solution blends SEO, PPC, social, and analytics
-              to drive measurable ROI and sustainable brand growth.
+              {heroDescription}
             </p>
             <div className="mt-8 flex gap-3">
               <a href="/contact" className="px-6 py-3 rounded-md bg-sky-500 text-white font-medium hover:bg-sky-600 transition-colors">
@@ -35,14 +53,10 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 md:px-10 py-16 md:py-20">
         <h2 className="text-2xl md:text-4xl font-bold">Capabilities</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-3">
-          {[ 
-            { t: "SEO", d: "Technical SEO, on-page, content, and authority building." },
-            { t: "PPC", d: "Google & Meta Ads with rigorous experimentation and budget control." },
-            { t: "Analytics", d: "GA4, tracking, dashboards, and conversion optimization." },
-          ].map(({ t, d }) => (
-            <div key={t} className="rounded-lg border border-black/10 dark:border-white/15 p-6">
-              <h3 className="text-xl font-semibold">{t}</h3>
-              <p className="mt-2 text-sm text-black/70 dark:text-white/70">{d}</p>
+          {services.map(({ name, description }) => (
+            <div key={name} className="rounded-lg border border-black/10 dark:border-white/15 p-6">
+              <h3 className="text-xl font-semibold">{name}</h3>
+              <p className="mt-2 text-sm text-black/70 dark:text-white/70">{description}</p>
             </div>
           ))}
         </div>
@@ -62,16 +76,11 @@ export default function Home() {
       <section className="mx-auto max-w-6xl px-6 md:px-10 py-16 md:py-20">
         <h2 className="text-2xl md:text-4xl font-bold">Our Process</h2>
         <div className="mt-8 grid gap-6 md:grid-cols-4">
-          {[
-            { t: "Discover", d: "Audit, goals, ICP, and competitive landscape." },
-            { t: "Plan", d: "Roadmap with KPIs, channels, and resourcing." },
-            { t: "Execute", d: "Launch SEO, ads, and content with tight feedback loops." },
-            { t: "Optimize", d: "Measure, test, and iterate for compounding gains." },
-          ].map(({ t, d }, i) => (
-            <div key={t} className="rounded-lg border border-black/10 dark:border-white/15 p-6">
-              <div className="h-8 w-8 rounded-full bg-sky-500/10 text-sky-600 grid place-items-center font-semibold">{i+1}</div>
-              <h3 className="mt-3 text-lg font-semibold">{t}</h3>
-              <p className="mt-2 text-sm text-black/70 dark:text-white/70">{d}</p>
+          {process.map(({ number, title, description }) => (
+            <div key={title} className="rounded-lg border border-black/10 dark:border-white/15 p-6">
+              <div className="h-8 w-8 rounded-full bg-sky-500/10 text-sky-600 grid place-items-center font-semibold">{number}</div>
+              <h3 className="mt-3 text-lg font-semibold">{title}</h3>
+              <p className="mt-2 text-sm text-black/70 dark:text-white/70">{description}</p>
             </div>
           ))}
         </div>
