@@ -20,6 +20,11 @@ export function getHomepageContent() {
       seoDescription: string;
       services: Array<{ name: string; description: string }>;
       process: Array<{ number: number; title: string; description: string }>;
+      caseStudies?: Array<{ category: string; heading: string; description: string }>;
+      faqs?: Array<{ question: string; answer: string }>;
+      socialProof?: { quote: string; attribution: string };
+      cta?: { heading: string; description: string; buttonText: string };
+      finalCta?: { heading: string; description: string; buttonText: string };
     };
   } catch (error) {
     console.error('Error reading homepage content:', error);

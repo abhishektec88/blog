@@ -38,3 +38,31 @@ process:
   - number: 4
     title: Optimize
     description: Measure, test, and iterate for compounding gains.
+caseStudies:
+  - category: SaaS
+    heading: "+62% Qualified Leads"
+    description: Scaled SEO + paid search with CRO to reduce CPA.
+  - category: E-commerce
+    heading: "+38% ROAS"
+    description: Performance creatives and feed optimization across channels.
+  - category: Fintech
+    heading: "3x Organic Traffic"
+    description: Technical fixes + content clusters for compounding growth.
+faqs:
+  - question: How soon can we see results?
+    answer: Most clients see early wins in 4–8 weeks with bigger gains over 3–6 months.
+  - question: Do you work on retainers or projects?
+    answer: Both. We tailor the engagement to your goals and team structure.
+  - question: Can you integrate with our analytics stack?
+    answer: Yes — GA4, Looker, Segment, server-side tagging, and more.
+socialProof:
+  quote: "Within 90 days, our qualified leads increased by 62% with a better CPA."
+  attribution: "— Growth Lead, SaaS Startup"
+cta:
+  heading: Ready to accelerate growth?
+  description: Book a free strategy call and get a tailored growth plan.
+  buttonText: Book a Strategy Call
+finalCta:
+  heading: Let's build your growth engine
+  description: Tell us your goals and we'll propose a plan within 48 hours.
+  buttonText: Start the conversation
