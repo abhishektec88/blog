@@ -1,41 +1,40 @@
-title: "Ankit Ranjan Digital Marketing Solution"
-description: "ROI-focused SEO, PPC, social media, and web analytics for growing brands."
+title: Ankit Ranjan Digital Marketing Solutions
+description: ROI-focused SEO, PPC, social media, and web analytics for growing brands.
 keywords:
-  - "digital marketing agency"
-  - "SEO services"
-  - "PPC advertising"
-  - "social media marketing"
-  - "content marketing"
-  - "web analytics"
-  - "lead generation"
-  - "Google Ads"
-  - "growth marketing"
-  - "data-driven marketing"
-
-heroH1: "Grow faster with data-driven marketing"
-heroDescription: "Ankit Ranjan Digital Marketing Solution blends SEO, PPC, social, and analytics to drive measurable ROI and sustainable brand growth."
-
-seoTitle: "Ankit Ranjan Digital Marketing Solution | SEO, PPC & Growth Marketing"
-seoDescription: "Grow faster with data-driven digital marketing. Expert SEO, PPC, social media, and analytics services to drive measurable ROI and sustainable brand growth."
-
+  - digital marketing agency
+  - SEO services
+  - PPC advertising
+  - social media marketing
+  - content marketing
+  - web analytics
+  - lead generation
+  - Google Ads
+  - growth marketing
+  - data-driven marketing
+heroH1: Grow faster with data-driven marketing
+heroDescription: Ankit Ranjan Digital Marketing Solution blends SEO, PPC,
+  social, and analytics to drive measurable ROI and sustainable brand growth.
+seoTitle: Ankit Ranjan Digital Marketing Solution | SEO, PPC & Growth Marketing
+seoDescription: Grow faster with data-driven digital marketing. Expert SEO, PPC,
+  social media, and analytics services to drive measurable ROI and sustainable
+  brand growth.
 services:
-  - name: "SEO"
-    description: "Technical SEO, on-page, content, and authority building."
-  - name: "PPC"
-    description: "Google & Meta Ads with rigorous experimentation and budget control."
-  - name: "Analytics"
-    description: "GA4, tracking, dashboards, and conversion optimization."
-
+  - name: SEO
+    description: Technical SEO, on-page, content, and authority building.
+  - name: PPC
+    description: Google & Meta Ads with rigorous experimentation and budget control.
+  - name: Analytics
+    description: GA4, tracking, dashboards, and conversion optimization.
 process:
   - number: 1
-    title: "Discover"
-    description: "Audit, goals, ICP, and competitive landscape."
+    title: Discover
+    description: Audit, goals, ICP, and competitive landscape.
   - number: 2
-    title: "Plan"
-    description: "Roadmap with KPIs, channels, and resourcing."
+    title: Plan
+    description: Roadmap with KPIs, channels, and resourcing.
   - number: 3
-    title: "Execute"
-    description: "Launch SEO, ads, and content with tight feedback loops."
+    title: Execute
+    description: Launch SEO, ads, and content with tight feedback loops.
   - number: 4
-    title: "Optimize"
-    description: "Measure, test, and iterate for compounding gains."
+    title: Optimize
+    description: Measure, test, and iterate for compounding gains.
