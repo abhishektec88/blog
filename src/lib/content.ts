@@ -1,51 +1,87 @@
-// Import YAML files directly using webpack loader
-import homepageContent from '../../content/homepage.yml';
-import servicesContent from '../../content/services-page.yml';
-import aboutContent from '../../content/about-page.yml';
-import contactContent from '../../content/contact-page.yml';
+import fs from 'fs';
+import path from 'path';
+import yaml from 'js-yaml';
+
+const contentDirectory = path.join(process.cwd(), 'content');
 
 export function getHomepageContent() {
-  return homepageContent as {
-    title: string;
-    description: string;
-    keywords: string[];
-    heroH1: string;
-    heroDescription: string;
-    seoTitle: string;
-    seoDescription: string;
-    services: Array<{ name: string; description: string }>;
-    process: Array<{ number: number; title: string; description: string }>;
-  };
+  try {
+    const fileContents = fs.readFileSync(
+      path.join(contentDirectory, 'homepage.yml'),
+      'utf8'
+    );
+    return yaml.load(fileContents) as {
+      title: string;
+      description: string;
+      keywords: string[];
+      heroH1: string;
+      heroDescription: string;
+      seoTitle: string;
+      seoDescription: string;
+      services: Array<{ name: string; description: string }>;
+      process: Array<{ number: number; title: string; description: string }>;
+    };
+  } catch (error) {
+    console.error('Error reading homepage content:', error);
+    return null;
+  }
 }
 
 export function getServicesContent() {
-  return servicesContent as {
-    title: string;
-    metaDescription: string;
-    keywords: string[];
-    h1: string;
-    introText: string;
-    services: Array<{ title: string; description: string }>;
-  };
+  try {
+    const fileContents = fs.readFileSync(
+      path.join(contentDirectory, 'services-page.yml'),
+      'utf8'
+    );
+    return yaml.load(fileContents) as {
+      title: string;
+      metaDescription: string;
+      keywords: string[];
+      h1: string;
+      introText: string;
+      services: Array<{ title: string; description: string }>;
+    };
+  } catch (error) {
+    console.error('Error reading services content:', error);
+    return null;
+  }
 }
 
 export function getAboutContent() {
-  return aboutContent as {
-    title: string;
-    metaDescription: string;
-    keywords: string[];
-    h1: string;
-    aboutText: string;
-  };
+  try {
+    const fileContents = fs.readFileSync(
+      path.join(contentDirectory, 'about-page.yml'),
+      'utf8'
+    );
+    return yaml.load(fileContents) as {
+      title: string;
+      metaDescription: string;
+      keywords: string[];
+      h1: string;
+      aboutText: string;
+    };
+  } catch (error) {
+    console.error('Error reading about content:', error);
+    return null;
+  }
 }
 
 export function getContactContent() {
-  return contactContent as {
-    title: string;
-    metaDescription: string;
-    keywords: string[];
-    h1: string;
-    email: string;
-    contactText: string;
-  };
+  try {
+    const fileContents = fs.readFileSync(
+      path.join(contentDirectory, 'contact-page.yml'),
+      'utf8'
+    );
+    return yaml.load(fileContents) as {
+      title: string;
+      metaDescription: string;
+      keywords: string[];
+      h1: string;
+      email: string;
+      contactText: string;
+    };
+  } catch (error) {
+    console.error('Error reading contact content:', error);
+    return null;
+  }
 }
